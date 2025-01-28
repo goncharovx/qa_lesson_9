@@ -9,7 +9,6 @@ def test_form_submission():
     current_dir = os.path.dirname(__file__)
     file_path = os.path.abspath(os.path.join(current_dir, '..', 'resources', 'pic.png'))
 
-    # Проверяем, что файл существует
     assert os.path.exists(file_path), f"File not found at path: {file_path}"
 
     user = User(
