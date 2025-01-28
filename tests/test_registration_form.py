@@ -6,7 +6,7 @@ def test_form_submission_with_page_object():
     registration_page = RegistrationPage()
 
     current_dir = os.path.dirname(__file__)
-    file_path = os.path.join(current_dir, 'resources', 'pic.png')
+    file_path = os.path.abspath(os.path.join(current_dir, '..', 'resources', 'pic.png'))
 
     registration_page.open() \
         .fill_first_name('Sonic') \
