@@ -5,7 +5,6 @@ from selenium import webdriver
 
 @pytest.fixture(scope="function", autouse=True)
 def browser_setup():
-    # Настройки
     options = webdriver.ChromeOptions()
     browser.config.driver_options = options
     browser.config.browser_name = 'chrome'
@@ -15,5 +14,4 @@ def browser_setup():
 
     yield
 
-    # Закрыть браузер
     browser.quit()
