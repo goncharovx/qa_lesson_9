@@ -1,5 +1,6 @@
-from pages.registration_page import RegistrationPage
 import os
+
+from pages.registration_page import RegistrationPage
 
 
 def test_form_submission_with_page_object():
