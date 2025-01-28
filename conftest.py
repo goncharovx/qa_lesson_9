@@ -5,7 +5,6 @@ from selenium import webdriver
 
 @pytest.fixture(scope="function", autouse=True)
 def browser_setup():
-    # Настройки
     options = webdriver.ChromeOptions()
     # options.page_load_strategy = 'eager'
     browser.config.driver_options = options
@@ -18,5 +17,4 @@ def browser_setup():
 
     yield
 
-    # Закрыть браузер
     browser.quit()
