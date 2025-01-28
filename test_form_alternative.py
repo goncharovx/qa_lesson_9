@@ -1,7 +1,7 @@
 import os
 
 from selene import have
-from selene.support.shared import browser
+from selene import browser
 from selene.support.shared.jquery_style import s
 
 
@@ -12,7 +12,7 @@ def test_form_submission_with_s_and_banner_removal():
 
     # Путь к файлу
     current_dir = os.path.dirname(__file__)
-    file_path = os.path.join(current_dir, 'resources', 'test_upload.png')
+    file_path = os.path.join(current_dir, 'resources', 'pic.png')
 
     # Заполнение формы
     s('#firstName').type('Sonic')
@@ -56,6 +56,6 @@ def test_form_submission_with_s_and_banner_removal():
     s('.table-responsive').should(have.text('Maths'))
     s('.table-responsive').should(have.text('Sports'))
     s('.table-responsive').should(have.text('Music'))
-    s('.table-responsive').should(have.text('test_upload.png'))
+    s('.table-responsive').should(have.text('pic.png'))
     s('.table-responsive').should(have.text('Moscow 5'))
     s('.table-responsive').should(have.text('NCR Delhi'))
