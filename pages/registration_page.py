@@ -4,7 +4,7 @@ from selene.support.shared.jquery_style import s
 
 class RegistrationPage:
     def open(self):
-        browser.open('https://demoqa.com/automation-practice-form')
+        browser.open('/automation-practice-form')
         return self
 
     def remove_banners(self):
